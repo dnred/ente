@@ -6,8 +6,12 @@ import {
     isMLEnabled,
     isMLSupported,
     mlStatusSnapshot,
+    wipCluster,
+    wipClusterEnable,
 } from "@/new/photos/services/ml";
-import type { Person } from "@/new/photos/services/ml/people";
+import { clusterGroups } from "@/new/photos/services/ml/db";
+import type { SearchPerson } from "@/new/photos/services/search";
+import { syncCGroups } from "@/new/photos/services/user-entity";
 import { EnteFile } from "@/new/photos/types/file";
 import * as chrono from "chrono-node";
 import { t } from "i18next";
@@ -188,6 +192,9 @@ export async function getMLStatusSuggestion(): Promise<Suggestion> {
             break;
         case "indexing":
             label = t("indexing_photos", status);
+            break;
+        case "fetching":
+            label = t("indexing_fetching", status);
             break;
         case "clustering":
             label = t("indexing_people", status);
@@ -403,7 +410,7 @@ function convertSuggestionToSearchQuery(option: Suggestion): Search {
             return { files: option.value as number[] };
 
         case SuggestionType.PERSON:
-            return { person: option.value as Person };
+            return { person: option.value as SearchPerson };
 
         case SuggestionType.FILE_TYPE:
             return { fileType: option.value as FileType };
@@ -413,13 +420,28 @@ function convertSuggestionToSearchQuery(option: Suggestion): Search {
     }
 }
 
+let done = false;
 async function getAllPeople(limit: number = undefined) {
-    let people: Array<Person> = []; // await mlIDbStorage.getAllPeople();
+    if (!(await wipClusterEnable())) return [];
+    if (done) return [];
+
+    done = true;
+    if (process.env.NEXT_PUBLIC_ENTE_WIP_CL_FETCH) {
+        await syncCGroups();
+        const people = await clusterGroups();
+        log.debug(() => ["people", { people }]);
+    }
+
+    let people: Array<SearchPerson> = []; // await mlIDbStorage.getAllPeople();
+    people = await wipCluster();
     // await mlPeopleStore.iterate<Person, void>((person) => {
     //     people.push(person);
     // });
     people = people ?? [];
-    return people
+    const result = people
         .sort((p1, p2) => p2.files.length - p1.files.length)
         .slice(0, limit);
+    // log.debug(() => ["getAllPeople", result]);
+
+    return result;
 }

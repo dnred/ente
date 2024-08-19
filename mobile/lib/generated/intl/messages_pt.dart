@@ -673,7 +673,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "empty": MessageLookupByLibrary.simpleMessage("Esvaziar"),
         "emptyTrash":
             MessageLookupByLibrary.simpleMessage("Esvaziar a lixeira?"),
-        "enableMaps": MessageLookupByLibrary.simpleMessage("Habilitar mapa"),
+        "enableMaps": MessageLookupByLibrary.simpleMessage("Habilitar Mapa"),
         "enableMapsDesc": MessageLookupByLibrary.simpleMessage(
             "Isto mostrará suas fotos em um mapa do mundo.\n\nEste mapa é hospedado pelo OpenStreetMap, e os exatos locais de suas fotos nunca são compartilhados.\n\nVocê pode desativar esse recurso a qualquer momento nas Configurações."),
         "encryptingBackup":
@@ -817,6 +817,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Conceder permissão"),
         "groupNearbyPhotos":
             MessageLookupByLibrary.simpleMessage("Agrupar fotos próximas"),
+        "guestView": MessageLookupByLibrary.simpleMessage("Visão de convidado"),
+        "guestViewEnablePreSteps": MessageLookupByLibrary.simpleMessage(
+            "Para ativar a visão de convidado, por favor ative um método de autenticação nas configurações do sistema do seu dispositivo."),
         "hearUsExplanation": MessageLookupByLibrary.simpleMessage(
             "Não rastreamos instalações do aplicativo. Seria útil se você nos contasse onde nos encontrou!"),
         "hearUsWhereTitle": MessageLookupByLibrary.simpleMessage(
@@ -1041,8 +1044,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "No momento não há backup de fotos sendo feito"),
         "noPhotosFoundHere": MessageLookupByLibrary.simpleMessage(
             "Nenhuma foto encontrada aqui"),
-        "noQuickLinksSelected":
-            MessageLookupByLibrary.simpleMessage("No quick links selected"),
+        "noQuickLinksSelected": MessageLookupByLibrary.simpleMessage(
+            "Nenhum link rápido selecionado"),
         "noRecoveryKey": MessageLookupByLibrary.simpleMessage(
             "Nenhuma chave de recuperação?"),
         "noRecoveryKeyNoDecryption": MessageLookupByLibrary.simpleMessage(
@@ -1148,7 +1151,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseLoginAgain": MessageLookupByLibrary.simpleMessage(
             "Por favor, inicie sessão novamente"),
         "pleaseSelectQuickLinksToRemove": MessageLookupByLibrary.simpleMessage(
-            "Please select quick links to remove"),
+            "Selecione links rápidos para remover"),
         "pleaseSendTheLogsTo": m42,
         "pleaseTryAgain":
             MessageLookupByLibrary.simpleMessage("Por favor, tente novamente"),
@@ -1218,7 +1221,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "referFriendsAnd2xYourPlan": MessageLookupByLibrary.simpleMessage(
             "Indique amigos e 2x seu plano"),
         "referralStep1": MessageLookupByLibrary.simpleMessage(
-            "Envie esse código aos seus amigos"),
+            "1. Dê este código aos seus amigos"),
         "referralStep2": MessageLookupByLibrary.simpleMessage(
             "2. Eles se inscrevem em um plano pago"),
         "referralStep3": m44,
@@ -1253,7 +1256,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "removePublicLink":
             MessageLookupByLibrary.simpleMessage("Remover link público"),
         "removePublicLinks":
-            MessageLookupByLibrary.simpleMessage("Remove public links"),
+            MessageLookupByLibrary.simpleMessage("Remover link público"),
         "removeShareItemsWarning": MessageLookupByLibrary.simpleMessage(
             "Alguns dos itens que você está removendo foram adicionados por outras pessoas, e você perderá o acesso a eles"),
         "removeWithQuestionMark":
@@ -1505,8 +1508,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "suggestFeatures":
             MessageLookupByLibrary.simpleMessage("Sugerir recurso"),
         "support": MessageLookupByLibrary.simpleMessage("Suporte"),
-        "swipeLockEnablePreSteps": MessageLookupByLibrary.simpleMessage(
-            "Para ativar o bloqueio por deslizar, por favor ative um método de autenticação nas configurações do sistema do seu dispositivo."),
         "syncProgress": m62,
         "syncStopped":
             MessageLookupByLibrary.simpleMessage("Sincronização interrompida"),
@@ -1562,7 +1563,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Isso fará com que você saia deste dispositivo!"),
         "thisWillRemovePublicLinksOfAllSelectedQuickLinks":
             MessageLookupByLibrary.simpleMessage(
-                "This will remove public links of all selected quick links."),
+                "Isto removerá links públicos de todos os links rápidos selecionados."),
         "toEnableAppLockPleaseSetupDevicePasscodeOrScreen":
             MessageLookupByLibrary.simpleMessage(
                 "Para ativar o bloqueio de app, por favor ative um método de autenticação nas configurações do sistema do seu dispositivo."),

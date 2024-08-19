@@ -659,6 +659,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enableMaps": MessageLookupByLibrary.simpleMessage("Enable Maps"),
         "enableMapsDesc": MessageLookupByLibrary.simpleMessage(
             "This will show your photos on a world map.\n\nThis map is hosted by Open Street Map, and the exact locations of your photos are never shared.\n\nYou can disable this feature anytime from Settings."),
+        "enableMultiPartUpload":
+            MessageLookupByLibrary.simpleMessage("Enable multi-part upload"),
         "encryptingBackup":
             MessageLookupByLibrary.simpleMessage("Encrypting backup..."),
         "encryption": MessageLookupByLibrary.simpleMessage("Encryption"),
@@ -793,6 +795,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Grant permission"),
         "groupNearbyPhotos":
             MessageLookupByLibrary.simpleMessage("Group nearby photos"),
+        "guestView": MessageLookupByLibrary.simpleMessage("Guest view"),
+        "guestViewEnablePreSteps": MessageLookupByLibrary.simpleMessage(
+            "To enable guest view, please setup device passcode or screen lock in your system settings."),
         "hearUsExplanation": MessageLookupByLibrary.simpleMessage(
             "We don\'t track app installs. It\'d help if you told us where you found us!"),
         "hearUsWhereTitle": MessageLookupByLibrary.simpleMessage(
@@ -1447,8 +1452,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "suggestFeatures":
             MessageLookupByLibrary.simpleMessage("Suggest features"),
         "support": MessageLookupByLibrary.simpleMessage("Support"),
-        "swipeLockEnablePreSteps": MessageLookupByLibrary.simpleMessage(
-            "To enable swipe lock, please setup device passcode or screen lock in your system settings."),
         "syncProgress": m62,
         "syncStopped": MessageLookupByLibrary.simpleMessage("Sync stopped"),
         "syncing": MessageLookupByLibrary.simpleMessage("Syncing..."),
